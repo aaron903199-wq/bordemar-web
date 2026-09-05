@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
   <head>
     <meta charset="UTF-8" />
 
@@ -8,18 +8,27 @@
       content="width=device-width, initial-scale=1.0"
     />
 
+    <!-- =====================================================
+         SEO PRINCIPAL
+    ====================================================== -->
+
     <title>
-      Servicios Marítimos Bordemar | Servicios Técnicos y Arriendo de Naves
+      Servicios Marítimos y Arriendo de Naves | Bordemar Chile
     </title>
 
     <meta
       name="description"
-      content="Servicios Marítimos Bordemar SPA ofrece mantenimiento, electrónica marina, certificaciones, documentación, apoyo operacional y arriendo de naves en Chile."
+      content="Servicios Marítimos Bordemar SPA: mantenimiento, electrónica marina, certificaciones, documentación, apoyo operacional y arriendo de naves en Chile."
     />
 
     <meta
       name="robots"
-      content="index, follow"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
 
     <meta
@@ -32,7 +41,32 @@
       content="#083B53"
     />
 
-    <!-- Open Graph / WhatsApp / Facebook -->
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/bordemar-logo.png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      href="/bordemar-logo.png"
+    />
+
+    <!-- URL oficial del sitio -->
+    <link
+      rel="canonical"
+      href="https://www.serviciosmaritimosbordemar.cl/"
+    />
+
+    <!-- =====================================================
+         OPEN GRAPH
+         WhatsApp / Facebook / LinkedIn
+    ====================================================== -->
+
     <meta
       property="og:type"
       content="website"
@@ -49,8 +83,13 @@
     />
 
     <meta
+      property="og:url"
+      content="https://www.serviciosmaritimosbordemar.cl/"
+    />
+
+    <meta
       property="og:title"
-      content="Servicios Marítimos Bordemar | Soluciones para Naves y Empresas"
+      content="Servicios Marítimos y Arriendo de Naves | Bordemar"
     />
 
     <meta
@@ -58,7 +97,20 @@
       content="Servicios técnicos, mantenimiento, electrónica marina, certificaciones, documentación, apoyo operacional y arriendo de naves en Chile."
     />
 
-    <!-- Twitter / X -->
+    <meta
+      property="og:image"
+      content="https://www.serviciosmaritimosbordemar.cl/bordemar-logo.png"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="Logo de Servicios Marítimos Bordemar SPA"
+    />
+
+    <!-- =====================================================
+         TWITTER / X
+    ====================================================== -->
+
     <meta
       name="twitter:card"
       content="summary_large_image"
@@ -66,33 +118,60 @@
 
     <meta
       name="twitter:title"
-      content="Servicios Marítimos Bordemar SPA"
+      content="Servicios Marítimos y Arriendo de Naves | Bordemar"
     />
 
     <meta
       name="twitter:description"
-      content="Soluciones técnicas, operacionales y documentales para naves y empresas del sector marítimo en Chile."
+      content="Soluciones técnicas, operacionales y documentales para naves, armadores y empresas del sector marítimo en Chile."
     />
 
-    <!-- Datos estructurados para Google -->
+    <meta
+      name="twitter:image"
+      content="https://www.serviciosmaritimosbordemar.cl/bordemar-logo.png"
+    />
+
+    <!-- =====================================================
+         DATOS ESTRUCTURADOS PARA GOOGLE
+    ====================================================== -->
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Servicios Marítimos Bordemar SPA",
-        "description": "Empresa de servicios marítimos dedicada a servicios técnicos, mantenimiento, electrónica marina, certificaciones, documentación, apoyo operacional y arriendo de naves.",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Chile"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+56 9 4585 2433",
-          "email": "aaron903199@gmail.com",
-          "contactType": "customer service",
-          "areaServed": "CL",
-          "availableLanguage": "Spanish"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.serviciosmaritimosbordemar.cl/#organization",
+            "name": "Servicios Marítimos Bordemar SPA",
+            "url": "https://www.serviciosmaritimosbordemar.cl/",
+            "logo": "https://www.serviciosmaritimosbordemar.cl/bordemar-logo.png",
+            "description": "Empresa de servicios marítimos dedicada al mantenimiento de naves, electrónica marina, certificaciones, documentación, apoyo operacional y arriendo de embarcaciones en Chile.",
+            "email": "aaron903199@gmail.com",
+            "telephone": "+56945852433",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Chile"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+56945852433",
+              "email": "aaron903199@gmail.com",
+              "contactType": "customer service",
+              "areaServed": "CL",
+              "availableLanguage": "Spanish"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.serviciosmaritimosbordemar.cl/#website",
+            "url": "https://www.serviciosmaritimosbordemar.cl/",
+            "name": "Servicios Marítimos Bordemar SPA",
+            "inLanguage": "es-CL",
+            "publisher": {
+              "@id": "https://www.serviciosmaritimosbordemar.cl/#organization"
+            }
+          }
+        ]
       }
     </script>
   </head>
