@@ -14,21 +14,31 @@ export default function Nosotros() {
           </h2>
 
           <p className="nosotros-intro">
-            En Servicios Marítimos Bordemar SPA entregamos soluciones
-            técnicas, operacionales y documentales para naves,
-            armadores y empresas vinculadas al sector marítimo.
+            En Servicios Marítimos Bordemar SPA entregamos servicios
+            marítimos integrales para naves, armadores y empresas
+            vinculadas al sector marítimo y acuícola en Chile.
           </p>
 
           <p>
             Nuestro trabajo combina experiencia en terreno, conocimiento
-            operacional y capacidad de coordinación para responder
-            a requerimientos de mantenimiento, electrónica marina,
-            inspecciones, documentación, certificaciones y apoyo técnico.
+            operacional y capacidad de coordinación para responder a
+            requerimientos de mantenimiento de naves, electrónica marina,
+            inspecciones técnicas, documentación marítima, certificaciones
+            y apoyo operacional.
+          </p>
+
+          <p>
+            Desarrollamos soluciones prácticas para embarcaciones y empresas
+            que requieren asistencia técnica, regularización documental,
+            apoyo en faenas marítimas, coordinación de trabajos a bordo
+            y servicios asociados a la operación segura de sus naves.
           </p>
 
           <p>
             Nos enfocamos en entregar respuestas claras, soluciones
-            prácticas y acompañamiento durante cada etapa del servicio.
+            técnicas adecuadas y acompañamiento durante cada etapa del
+            servicio, con cobertura para operaciones marítimas a lo largo
+            de Chile.
           </p>
 
           <div className="nosotros-destacados">
@@ -40,8 +50,9 @@ export default function Nosotros() {
                 <strong>Respuesta técnica</strong>
 
                 <p>
-                  Evaluamos cada requerimiento para proponer
-                  una solución adecuada a la operación de la nave.
+                  Evaluamos cada requerimiento para proponer una solución
+                  adecuada a la operación, condición y necesidades
+                  específicas de cada nave.
                 </p>
               </div>
             </div>
@@ -53,8 +64,9 @@ export default function Nosotros() {
                 <strong>Trabajo en terreno</strong>
 
                 <p>
-                  Servicios desarrollados directamente a bordo
-                  y en coordinación con clientes y operadores.
+                  Ejecutamos servicios directamente a bordo y coordinamos
+                  trabajos con armadores, operadores, tripulaciones
+                  y empresas del sector marítimo.
                 </p>
               </div>
             </div>
@@ -72,8 +84,8 @@ export default function Nosotros() {
 
               <p>
                 Conocimiento aplicado a operaciones de naves,
-                inspecciones, mantenimiento y requerimientos
-                técnicos del sector.
+                inspecciones, mantenimiento, electrónica marina
+                y requerimientos técnicos del sector.
               </p>
             </div>
           </article>
@@ -85,9 +97,9 @@ export default function Nosotros() {
               <h3>Soluciones integrales</h3>
 
               <p>
-                Integramos servicios técnicos, documentación,
-                certificaciones y coordinación operacional
-                en una misma respuesta.
+                Integramos servicios técnicos, mantenimiento,
+                documentación, certificaciones y coordinación
+                operacional en una misma respuesta.
               </p>
             </div>
           </article>
@@ -100,7 +112,8 @@ export default function Nosotros() {
 
               <p>
                 Coordinamos y desarrollamos servicios marítimos
-                para clientes y operaciones a lo largo de Chile.
+                para naves, armadores y empresas con operaciones
+                a lo largo de Chile.
               </p>
             </div>
           </article>

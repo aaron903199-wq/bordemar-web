@@ -9,19 +9,20 @@ export default function Hero() {
         <div className="hero-content">
 
           <p className="hero-eyebrow">
-            SERVICIOS MARÍTIMOS · CHILE
+            SERVICIOS MARÍTIMOS EN CHILE
           </p>
 
           <h1>
-            Soluciones marítimas
+            Servicios marítimos
             <span>para naves y empresas</span>
-            del sector
+            en Chile
           </h1>
 
           <p className="hero-description">
-            Servicios técnicos, operacionales y documentales
-            orientados a embarcaciones, armadores y empresas
-            vinculadas a la actividad marítima.
+            Mantenimiento de naves, electrónica marina, inspecciones,
+            certificaciones, documentación, apoyo operacional y
+            soluciones técnicas para embarcaciones, armadores
+            y empresas del sector marítimo y acuícola.
           </p>
 
           <div className="hero-actions">
@@ -30,6 +31,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="button button-primary hero-button-primary"
+              aria-label="Solicitar cotización de servicios marítimos a Bordemar"
             >
               Solicitar cotización
               <span aria-hidden="true">→</span>
@@ -38,6 +40,7 @@ export default function Hero() {
             <a
               href="#servicios"
               className="button button-secondary hero-button-secondary"
+              aria-label="Ver servicios marítimos de Bordemar"
             >
               Ver servicios
             </a>
@@ -57,7 +60,7 @@ export default function Hero() {
 
                 <p>
                   Mantenimiento, electrónica marina,
-                  inspecciones y equipamiento.
+                  inspecciones y equipamiento para naves.
                 </p>
               </div>
             </div>
@@ -73,8 +76,8 @@ export default function Hero() {
                 </strong>
 
                 <p>
-                  Apoyo operacional y coordinación
-                  de servicios en terreno.
+                  Apoyo operacional, trabajos a bordo
+                  y coordinación de servicios en terreno.
                 </p>
               </div>
             </div>
@@ -90,8 +93,8 @@ export default function Hero() {
                 </strong>
 
                 <p>
-                  Atención y coordinación de servicios
-                  a lo largo de todo Chile.
+                  Atención y coordinación de servicios marítimos
+                  para operaciones a lo largo de Chile.
                 </p>
               </div>
             </div>
@@ -109,13 +112,14 @@ export default function Hero() {
             </span>
 
             <h2>
-              Experiencia aplicada
+              Experiencia marítima aplicada
               directamente en terreno
             </h2>
 
             <p>
-              Soluciones pensadas para responder a los
-              requerimientos reales de cada nave y operación.
+              Soluciones técnicas y operacionales pensadas para
+              responder a los requerimientos reales de cada nave,
+              faena y operación marítima.
             </p>
 
             <div className="hero-visual-line"></div>
@@ -152,15 +156,15 @@ export default function Hero() {
         </span>
 
         <span>
-          MANTENIMIENTO
+          MANTENIMIENTO DE NAVES
         </span>
 
         <span>
-          CERTIFICACIONES
+          CERTIFICACIONES MARÍTIMAS
         </span>
 
         <span>
-          DOCUMENTACIÓN
+          DOCUMENTACIÓN MARÍTIMA
         </span>
 
         <span>

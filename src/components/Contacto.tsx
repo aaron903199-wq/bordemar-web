@@ -3,27 +3,34 @@ export default function Contacto() {
     'https://wa.me/56945852433?text=Hola%20Servicios%20Mar%C3%ADtimos%20Bordemar%20SPA%2C%20necesito%20informaci%C3%B3n%20sobre%20sus%20servicios.'
 
   return (
-    <section className="contacto" id="contacto">
+    <section
+      className="contacto"
+      id="contacto"
+      aria-labelledby="titulo-contacto"
+    >
       <div className="container contacto-grid">
 
         <div className="contacto-content">
           <p className="section-eyebrow">
-            CONTACTO
+            CONTACTO BORDEMAR
           </p>
 
-          <h2>
+          <h2 id="titulo-contacto">
             Cuéntanos qué necesita
             <span>tu nave</span>
           </h2>
 
           <p className="contacto-intro">
-            Coordinamos servicios técnicos, operacionales y documentales
-            para naves, armadores y empresas del sector marítimo.
+            Coordinamos servicios marítimos técnicos, operacionales
+            y documentales para naves, armadores y empresas del sector
+            marítimo y acuícola en Chile.
           </p>
 
           <p className="contacto-apoyo">
-            Escríbenos directamente y revisaremos tu requerimiento para
-            orientarte sobre la mejor alternativa de trabajo.
+            Escríbenos directamente para solicitar una cotización,
+            consultar disponibilidad o coordinar trabajos de mantenimiento,
+            electrónica marina, certificaciones, documentación,
+            maestranza naval, apoyo operacional o arriendo de naves.
           </p>
 
           <div className="contacto-actions">
@@ -32,6 +39,7 @@ export default function Contacto() {
               target="_blank"
               rel="noopener noreferrer"
               className="button button-contacto"
+              aria-label="Solicitar cotización de servicios marítimos por WhatsApp"
             >
               <svg
                 viewBox="0 0 32 32"
@@ -50,6 +58,7 @@ export default function Contacto() {
             <a
               href="mailto:aaron903199@gmail.com"
               className="contacto-email"
+              aria-label="Enviar correo electrónico a Servicios Marítimos Bordemar SPA"
             >
               aaron903199@gmail.com
             </a>
@@ -83,7 +92,10 @@ export default function Contacto() {
             <div>
               <p>Teléfono / WhatsApp</p>
 
-              <a href="tel:+56945852433">
+              <a
+                href="tel:+56945852433"
+                aria-label="Llamar a Servicios Marítimos Bordemar SPA"
+              >
                 +56 9 4585 2433
               </a>
             </div>
@@ -95,7 +107,10 @@ export default function Contacto() {
             <div>
               <p>Correo electrónico</p>
 
-              <a href="mailto:aaron903199@gmail.com">
+              <a
+                href="mailto:aaron903199@gmail.com"
+                aria-label="Enviar correo a Servicios Marítimos Bordemar SPA"
+              >
                 aaron903199@gmail.com
               </a>
             </div>
@@ -105,7 +120,7 @@ export default function Contacto() {
             <span className="contacto-numero">03</span>
 
             <div>
-              <p>Cobertura</p>
+              <p>Cobertura de servicios marítimos</p>
 
               <strong>
                 A lo largo de todo Chile
@@ -117,7 +132,7 @@ export default function Contacto() {
             <span className="contacto-numero">04</span>
 
             <div>
-              <p>Servicios</p>
+              <p>Servicios para naves y empresas</p>
 
               <strong>
                 Soporte técnico, operacional y documental

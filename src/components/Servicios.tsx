@@ -3,7 +3,7 @@ const servicios = [
     numero: '01',
     titulo: 'Electrónica marina',
     descripcion:
-      'Instalación, revisión y configuración de equipos de navegación, radar, GPS, AIS, VHF y sistemas electrónicos a bordo.',
+      'Instalación, revisión, configuración y puesta en servicio de equipos de navegación y comunicaciones a bordo, incluyendo radar, GPS, AIS, VHF y sistemas electrónicos marinos.',
     icono: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -25,9 +25,9 @@ const servicios = [
   },
   {
     numero: '02',
-    titulo: 'Mantenimiento e inspecciones',
+    titulo: 'Mantenimiento e inspecciones de naves',
     descripcion:
-      'Revisión técnica, mantenimiento preventivo y correctivo de equipos, sistemas y componentes de embarcaciones.',
+      'Revisión técnica, mantenimiento preventivo y correctivo, diagnóstico e inspección de equipos, sistemas y componentes instalados en embarcaciones y naves menores.',
     icono: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -43,9 +43,9 @@ const servicios = [
   },
   {
     numero: '03',
-    titulo: 'Certificaciones',
+    titulo: 'Certificaciones marítimas',
     descripcion:
-      'Coordinación y apoyo técnico para certificación, revisión y verificación de equipamiento marítimo.',
+      'Coordinación, revisión y apoyo técnico para procesos de certificación, inspección y verificación de equipos, sistemas y elementos asociados a la operación de naves.',
     icono: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -70,7 +70,7 @@ const servicios = [
     numero: '04',
     titulo: 'Documentación marítima',
     descripcion:
-      'Elaboración, regularización y apoyo documental para naves, operaciones, procedimientos y cumplimiento normativo.',
+      'Elaboración, actualización, regularización y apoyo documental para naves, operaciones, procedimientos, planes, registros y requerimientos asociados al cumplimiento normativo marítimo.',
     icono: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -92,9 +92,9 @@ const servicios = [
   },
   {
     numero: '05',
-    titulo: 'Maestranza y equipos de cubierta',
+    titulo: 'Maestranza naval y equipos de cubierta',
     descripcion:
-      'Fabricación, reparación y trabajos asociados a grúas, anclas, estructuras, componentes y equipos de cubierta.',
+      'Fabricación, reparación, modificación y trabajos asociados a grúas, anclas, estructuras metálicas, componentes navales y equipos de cubierta para embarcaciones.',
     icono: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -117,9 +117,9 @@ const servicios = [
   },
   {
     numero: '06',
-    titulo: 'Apoyo operacional',
+    titulo: 'Apoyo operacional marítimo',
     descripcion:
-      'Servicios en terreno, coordinación técnica, apoyo a tripulaciones y asistencia operacional para empresas del sector marítimo.',
+      'Servicios en terreno, coordinación técnica, apoyo a tripulaciones, asistencia a bordo y soporte operacional para armadores y empresas del sector marítimo y acuícola.',
     icono: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path
@@ -143,7 +143,7 @@ export default function Servicios() {
         <div className="servicios-header">
           <div>
             <p className="section-eyebrow">
-              SERVICIOS MARÍTIMOS
+              SERVICIOS MARÍTIMOS EN CHILE
             </p>
 
             <h2>
@@ -153,8 +153,9 @@ export default function Servicios() {
           </div>
 
           <p className="servicios-intro">
-            Entregamos apoyo técnico, operacional y documental
-            para naves, armadores y empresas vinculadas al sector marítimo.
+            Entregamos servicios marítimos técnicos, operacionales y
+            documentales para naves, armadores y empresas vinculadas
+            al sector marítimo y acuícola en Chile.
           </p>
         </div>
 
@@ -183,6 +184,7 @@ export default function Servicios() {
               <a
                 href="#contacto"
                 className="servicio-link"
+                aria-label={`Solicitar información sobre ${servicio.titulo}`}
               >
                 Solicitar información
                 <span aria-hidden="true">→</span>

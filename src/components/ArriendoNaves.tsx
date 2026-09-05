@@ -23,10 +23,12 @@ const naves = [
     matricula: 'MAU-4709',
     tipo: 'Nave menor de apoyo operacional',
     descripcion:
-      'Embarcación disponible para arriendo y apoyo en operaciones marítimas, transporte de personal y trabajos asociados al sector acuícola y marítimo.',
+      'Embarcación disponible para arriendo y apoyo en operaciones marítimas y acuícolas, transporte de personal, asistencia en terreno y servicios asociados a faenas de naves.',
     estado: 'Disponible para arriendo',
     imagen: smartsubFoto,
     fichaPdf: smartsubFicha,
+    alt:
+      "Nave SMART'SUB disponible para arriendo y apoyo en operaciones marítimas en Chile",
     caracteristicas: [
       {
         titulo: 'Eslora',
@@ -57,10 +59,12 @@ const naves = [
     matricula: 'QLL-2648',
     tipo: 'Nave de apoyo operacional',
     descripcion:
-      'Embarcación disponible para arriendo y apoyo en faenas marítimas, transporte, trabajos de cubierta y operaciones que requieran capacidad de izaje.',
+      'Nave disponible para arriendo y apoyo en faenas marítimas y acuícolas, transporte, trabajos de cubierta y operaciones que requieran capacidad de izaje mediante grúa.',
     estado: 'Disponible para arriendo',
     imagen: donaMaleFoto,
     fichaPdf: donaMaleFicha,
+    alt:
+      'Nave DOÑA MALE disponible para arriendo, faenas marítimas y trabajos de izaje en Chile',
     caracteristicas: [
       {
         titulo: 'Eslora',
@@ -91,10 +95,12 @@ const naves = [
     matricula: 'QLL-2337',
     tipo: 'Nave menor de apoyo operacional',
     descripcion:
-      'Embarcación disponible para arriendo y apoyo en operaciones marítimas, transporte de personal y servicios asociados al sector acuícola y marítimo.',
+      'Embarcación disponible para arriendo, transporte de personal y apoyo operacional en faenas marítimas, centros de cultivo y servicios vinculados al sector acuícola.',
     estado: 'Disponible para arriendo',
     imagen: belenFoto,
     fichaPdf: belenFicha,
+    alt:
+      'Nave BELÉN I disponible para arriendo y apoyo operacional marítimo y acuícola en Chile',
     caracteristicas: [
       {
         titulo: 'Eslora',
@@ -125,10 +131,12 @@ const naves = [
     matricula: '4641-CALBUCO',
     tipo: 'Nave de apoyo operacional',
     descripcion:
-      'Embarcación disponible para arriendo y apoyo en faenas marítimas, transporte, trabajos de cubierta y operaciones con requerimientos de izaje.',
+      'Nave disponible para arriendo y apoyo en faenas marítimas, transporte, trabajos de cubierta y operaciones de carga e izaje para empresas del sector marítimo y acuícola.',
     estado: 'Disponible para arriendo',
     imagen: patricioFoto,
     fichaPdf: patricioFicha,
+    alt:
+      'Nave PATRICIO ANDRÉS disponible para arriendo, trabajos de cubierta e izaje en Chile',
     caracteristicas: [
       {
         titulo: 'Eslora',
@@ -159,10 +167,12 @@ const naves = [
     matricula: 'Consultar ficha técnica',
     tipo: 'Nave de apoyo operacional',
     descripcion:
-      'Embarcación disponible para arriendo y apoyo en faenas marítimas, transporte, trabajos de cubierta y operaciones que requieran capacidad de carga e izaje.',
+      'Nave disponible para arriendo y apoyo en faenas marítimas y acuícolas, transporte, trabajos de cubierta y operaciones que requieran capacidad de carga e izaje.',
     estado: 'Disponible para arriendo',
     imagen: rioMauleFoto,
     fichaPdf: rioMauleFicha,
+    alt:
+      'Nave RÍO MAULE S disponible para arriendo, transporte y operaciones de carga e izaje en Chile',
     caracteristicas: [
       {
         titulo: 'Eslora',
@@ -411,6 +421,7 @@ export default function ArriendoNaves() {
     <section
       className="arriendo-naves arriendo-carrusel-section"
       id="arriendo"
+      aria-labelledby="titulo-arriendo-naves"
     >
 
       <div className="container">
@@ -420,22 +431,24 @@ export default function ArriendoNaves() {
           <div>
 
             <p className="section-eyebrow">
-              ARRIENDO DE NAVES
+              ARRIENDO DE NAVES EN CHILE
             </p>
 
-            <h2>
+            <h2 id="titulo-arriendo-naves">
               Naves disponibles
               <span>
-                para sus operaciones
+                para operaciones marítimas y acuícolas
               </span>
             </h2>
 
           </div>
 
           <p className="arriendo-intro">
-            Disponibilidad de embarcaciones para apoyo operacional,
-            transporte, faenas marítimas y servicios vinculados
-            al sector acuícola y marítimo.
+            Disponibilidad de embarcaciones y naves de apoyo para
+            arriendo, transporte de personal, faenas marítimas,
+            trabajos de cubierta, operaciones de carga e izaje
+            y servicios para empresas del sector marítimo y acuícola
+            en Chile.
           </p>
 
         </div>
@@ -447,7 +460,7 @@ export default function ArriendoNaves() {
             type="button"
             className="arriendo-arrow arriendo-arrow-left"
             onClick={() => moverCarrusel('izquierda')}
-            aria-label="Ver nave anterior"
+            aria-label="Ver nave anterior disponible para arriendo"
           >
             ‹
           </button>
@@ -476,7 +489,8 @@ export default function ArriendoNaves() {
 
                     <img
                       src={nave.imagen}
-                      alt={`${nave.nombre} ${nave.matricula}`}
+                      alt={nave.alt}
+                      loading="lazy"
                     />
 
                     <span className="arriendo-estado">
@@ -576,6 +590,7 @@ export default function ArriendoNaves() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="arriendo-pdf arriendo-boton-grande"
+                        aria-label={`Ver ficha técnica PDF de la nave ${nave.nombre}`}
                       >
 
                         <svg
@@ -615,6 +630,7 @@ export default function ArriendoNaves() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="arriendo-whatsapp arriendo-boton-grande"
+                        aria-label={`Consultar disponibilidad para arriendo de la nave ${nave.nombre}`}
                       >
 
                         <svg
@@ -649,7 +665,7 @@ export default function ArriendoNaves() {
             type="button"
             className="arriendo-arrow arriendo-arrow-right"
             onClick={() => moverCarrusel('derecha')}
-            aria-label="Ver siguiente nave"
+            aria-label="Ver siguiente nave disponible para arriendo"
           >
             ›
           </button>
@@ -658,7 +674,8 @@ export default function ArriendoNaves() {
 
 
         <p className="arriendo-carousel-hint">
-          Utiliza las flechas o desliza para conocer nuestras naves disponibles.
+          Utiliza las flechas o desliza para conocer nuestras
+          naves disponibles para arriendo y apoyo operacional.
         </p>
 
       </div>
