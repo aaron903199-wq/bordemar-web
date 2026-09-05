@@ -1,5 +1,20 @@
+import { useRef } from 'react'
+
 import smartsubFoto from '../assets/naves/fotos/SMARTSUB.jpeg'
 import smartsubFicha from '../assets/naves/fichas/SMART LM.pdf'
+
+import donaMaleFoto from '../assets/naves/fotos/doña male frente.jpeg'
+import donaMaleFicha from '../assets/naves/fichas/FICHA-DONA-MALE.pdf'
+
+import belenFoto from '../assets/naves/fotos/belen-I-frente.jpeg'
+import belenFicha from '../assets/naves/fichas/FICHA-TECNICA-BELEN 1.pdf'
+
+import patricioFoto from '../assets/naves/fotos/patricio-andres.jpeg'
+import patricioFicha from '../assets/naves/fichas/FICHA-PATRICIO-ANDRES.pdf'
+
+import rioMauleFoto from '../assets/naves/fotos/RIO-MAULE-S.jpeg'
+import rioMauleFicha from '../assets/naves/fichas/FICHA-RIO-MAULE-S.pdf'
+
 
 const naves = [
   {
@@ -12,7 +27,6 @@ const naves = [
     estado: 'Disponible para arriendo',
     imagen: smartsubFoto,
     fichaPdf: smartsubFicha,
-
     caracteristicas: [
       {
         titulo: 'Eslora',
@@ -36,19 +50,155 @@ const naves = [
       },
     ],
   },
+
+  {
+    id: 2,
+    nombre: 'DOÑA MALE',
+    matricula: 'QLL-2648',
+    tipo: 'Nave de apoyo operacional',
+    descripcion:
+      'Embarcación disponible para arriendo y apoyo en faenas marítimas, transporte, trabajos de cubierta y operaciones que requieran capacidad de izaje.',
+    estado: 'Disponible para arriendo',
+    imagen: donaMaleFoto,
+    fichaPdf: donaMaleFicha,
+    caracteristicas: [
+      {
+        titulo: 'Eslora',
+        valor: '18 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Manga',
+        valor: '6,8 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Capacidad',
+        valor: '12 personas',
+        icono: 'personas',
+      },
+      {
+        titulo: 'Grúa Fassi',
+        valor: '8 toneladas',
+        icono: 'grua',
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    nombre: 'BELÉN I',
+    matricula: 'QLL-2337',
+    tipo: 'Nave menor de apoyo operacional',
+    descripcion:
+      'Embarcación disponible para arriendo y apoyo en operaciones marítimas, transporte de personal y servicios asociados al sector acuícola y marítimo.',
+    estado: 'Disponible para arriendo',
+    imagen: belenFoto,
+    fichaPdf: belenFicha,
+    caracteristicas: [
+      {
+        titulo: 'Eslora',
+        valor: '13,6 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Manga',
+        valor: '4,30 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Capacidad',
+        valor: '10 personas',
+        icono: 'personas',
+      },
+      {
+        titulo: 'Motor',
+        valor: '185 HP',
+        icono: 'motor',
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    nombre: 'PATRICIO ANDRÉS',
+    matricula: '4641-CALBUCO',
+    tipo: 'Nave de apoyo operacional',
+    descripcion:
+      'Embarcación disponible para arriendo y apoyo en faenas marítimas, transporte, trabajos de cubierta y operaciones con requerimientos de izaje.',
+    estado: 'Disponible para arriendo',
+    imagen: patricioFoto,
+    fichaPdf: patricioFicha,
+    caracteristicas: [
+      {
+        titulo: 'Eslora',
+        valor: '18,6 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Manga',
+        valor: '6,6 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Capacidad',
+        valor: '12 personas',
+        icono: 'personas',
+      },
+      {
+        titulo: 'Grúa Palfinger',
+        valor: '6,2 toneladas',
+        icono: 'grua',
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    nombre: 'RÍO MAULE “S”',
+    matricula: 'Consultar ficha técnica',
+    tipo: 'Nave de apoyo operacional',
+    descripcion:
+      'Embarcación disponible para arriendo y apoyo en faenas marítimas, transporte, trabajos de cubierta y operaciones que requieran capacidad de carga e izaje.',
+    estado: 'Disponible para arriendo',
+    imagen: rioMauleFoto,
+    fichaPdf: rioMauleFicha,
+    caracteristicas: [
+      {
+        titulo: 'Eslora',
+        valor: '18 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Manga',
+        valor: '6,5 m',
+        icono: 'longitud',
+      },
+      {
+        titulo: 'Motor',
+        valor: '430 HP',
+        icono: 'motor',
+      },
+      {
+        titulo: 'Grúa Hiab',
+        valor: '16CL',
+        icono: 'grua',
+      },
+    ],
+  },
 ]
+
 
 function IconoCaracteristica({
   tipo,
 }: {
   tipo: string
 }) {
+
   if (tipo === 'personas') {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+
         <circle
           cx="9"
           cy="8"
@@ -82,16 +232,16 @@ function IconoCaracteristica({
           strokeWidth="1.6"
           strokeLinecap="round"
         />
+
       </svg>
     )
   }
 
+
   if (tipo === 'velocidad') {
     return (
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+
         <path
           d="M4 17a8 8 0 1 1 16 0"
           fill="none"
@@ -115,15 +265,92 @@ function IconoCaracteristica({
           strokeWidth="1.8"
           strokeLinecap="round"
         />
+
       </svg>
     )
   }
 
+
+  if (tipo === 'grua') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+
+        <path
+          d="M5 20h14M8 20V6h3v14"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+
+        <path
+          d="M10 7h8l-4-3"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M18 7v6"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+
+        <path
+          d="M16.5 15a1.5 1.5 0 0 0 3 0"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+
+      </svg>
+    )
+  }
+
+
+  if (tipo === 'motor') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+
+        <path
+          d="M6 8h9l3 3v6H6z"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M9 8V5h4v3M18 13h3M4 11H2v4h2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <circle
+          cx="10"
+          cy="13"
+          r="2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+
+      </svg>
+    )
+  }
+
+
   return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+
       <path
         d="M3 12h18"
         fill="none"
@@ -140,24 +367,58 @@ function IconoCaracteristica({
         strokeLinecap="round"
         strokeLinejoin="round"
       />
+
     </svg>
   )
 }
 
+
 export default function ArriendoNaves() {
+
+  const carruselRef = useRef<HTMLDivElement>(null)
+
   const whatsappBase =
     'https://wa.me/56945852433?text='
 
+
+  const moverCarrusel = (
+    direccion: 'izquierda' | 'derecha'
+  ) => {
+
+    const carrusel = carruselRef.current
+
+    if (!carrusel) return
+
+    const tarjeta =
+      carrusel.querySelector<HTMLElement>('.arriendo-card')
+
+    const desplazamiento =
+      tarjeta
+        ? tarjeta.offsetWidth + 26
+        : carrusel.clientWidth * 0.8
+
+    carrusel.scrollBy({
+      left:
+        direccion === 'derecha'
+          ? desplazamiento
+          : -desplazamiento,
+      behavior: 'smooth',
+    })
+  }
+
+
   return (
     <section
-      className="arriendo-naves"
+      className="arriendo-naves arriendo-carrusel-section"
       id="arriendo"
     >
+
       <div className="container">
 
         <div className="arriendo-header">
 
           <div>
+
             <p className="section-eyebrow">
               ARRIENDO DE NAVES
             </p>
@@ -168,6 +429,7 @@ export default function ArriendoNaves() {
                 para sus operaciones
               </span>
             </h2>
+
           </div>
 
           <p className="arriendo-intro">
@@ -178,118 +440,54 @@ export default function ArriendoNaves() {
 
         </div>
 
-        <div className="arriendo-grid">
 
-          {naves.map((nave) => {
-            const mensajeWhatsApp =
-              encodeURIComponent(
-                `Hola Servicios Marítimos Bordemar SPA, necesito información sobre el arriendo de la nave ${nave.nombre}, matrícula ${nave.matricula}.`
-              )
+        <div className="arriendo-carousel-shell">
 
-            return (
-              <article
-                className="arriendo-card arriendo-card-destacada"
-                key={nave.id}
-              >
+          <button
+            type="button"
+            className="arriendo-arrow arriendo-arrow-left"
+            onClick={() => moverCarrusel('izquierda')}
+            aria-label="Ver nave anterior"
+          >
+            ‹
+          </button>
 
-                <div className="arriendo-imagen arriendo-imagen-completa">
 
-                  <img
-                    src={nave.imagen}
-                    alt={`${nave.nombre} ${nave.matricula}`}
-                  />
+          <div
+            className="arriendo-grid arriendo-carousel"
+            ref={carruselRef}
+          >
 
-                  <span className="arriendo-estado">
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M3 16h18l-2 3H5l-2-3Z"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.7"
-                        strokeLinejoin="round"
-                      />
+            {naves.map((nave) => {
 
-                      <path
-                        d="M8 16V8h8v8M10 8V5h4v3"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.7"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+              const mensajeWhatsApp =
+                encodeURIComponent(
+                  `Hola Servicios Marítimos Bordemar SPA, necesito información sobre el arriendo de la nave ${nave.nombre}, matrícula ${nave.matricula}.`
+                )
 
-                    {nave.estado}
-                  </span>
+              return (
 
-                </div>
+                <article
+                  className="arriendo-card arriendo-card-destacada"
+                  key={nave.id}
+                >
 
-                <div className="arriendo-card-content">
+                  <div className="arriendo-imagen arriendo-imagen-completa">
 
-                  <span className="arriendo-tipo">
-                    {nave.tipo}
-                  </span>
+                    <img
+                      src={nave.imagen}
+                      alt={`${nave.nombre} ${nave.matricula}`}
+                    />
 
-                  <h3>
-                    {nave.nombre}
-                  </h3>
+                    <span className="arriendo-estado">
 
-                  <p className="arriendo-matricula">
-                    Matrícula {nave.matricula}
-                  </p>
-
-                  <p className="arriendo-descripcion">
-                    {nave.descripcion}
-                  </p>
-
-                  <div className="arriendo-caracteristicas">
-
-                    {nave.caracteristicas.map(
-                      (caracteristica) => (
-                        <div
-                          className="arriendo-caracteristica"
-                          key={caracteristica.titulo}
-                        >
-
-                          <div className="arriendo-caracteristica-icono">
-                            <IconoCaracteristica
-                              tipo={caracteristica.icono}
-                            />
-                          </div>
-
-                          <div>
-                            <span>
-                              {caracteristica.titulo}
-                            </span>
-
-                            <strong>
-                              {caracteristica.valor}
-                            </strong>
-                          </div>
-
-                        </div>
-                      )
-                    )}
-
-                  </div>
-
-                  <div className="arriendo-actions">
-
-                    <a
-                      href={nave.fichaPdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="arriendo-pdf arriendo-boton-grande"
-                    >
                       <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"
                       >
+
                         <path
-                          d="M6 3h8l4 4v14H6z"
+                          d="M3 16h18l-2 3H5l-2-3Z"
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="1.7"
@@ -297,51 +495,174 @@ export default function ArriendoNaves() {
                         />
 
                         <path
-                          d="M14 3v5h5M9 13h6M9 17h4"
+                          d="M8 16V8h8v8M10 8V5h4v3"
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="1.7"
                           strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
+
                       </svg>
 
-                      Ver ficha técnica PDF
+                      {nave.estado}
 
-                      <span aria-hidden="true">
-                        →
-                      </span>
-                    </a>
-
-                    <a
-                      href={`${whatsappBase}${mensajeWhatsApp}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="arriendo-whatsapp arriendo-boton-grande"
-                    >
-                      <svg
-                        viewBox="0 0 32 32"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.29.6 4.52 1.73 6.48L3 29l6.72-1.76a13 13 0 0 0 6.31 1.61h.01c7.18 0 13.02-5.82 13.02-12.98C29.06 8.82 23.22 3 16.04 3Zm0 23.66h-.01a10.8 10.8 0 0 1-5.52-1.51l-.4-.24-3.99 1.04 1.07-3.88-.26-.4a10.72 10.72 0 0 1-1.67-5.69c0-5.96 4.86-10.8 10.83-10.8 5.97 0 10.82 4.84 10.82 10.8 0 5.95-4.85 10.68-10.87 10.68Zm5.94-8.07c-.33-.17-1.92-.95-2.22-1.05-.3-.11-.52-.17-.74.16-.22.33-.85 1.05-1.04 1.27-.19.22-.38.25-.71.08-.33-.16-1.38-.5-2.63-1.6-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.58-.08-.16-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.16.22 2.32 3.54 5.62 4.96.78.34 1.4.54 1.87.69.79.25 1.5.21 2.07.13.63-.09 1.92-.79 2.19-1.55.27-.76.27-1.41.19-1.55-.08-.14-.3-.22-.63-.38Z"
-                        />
-                      </svg>
-
-                      Consultar disponibilidad
-                    </a>
+                    </span>
 
                   </div>
 
-                </div>
 
-              </article>
-            )
-          })}
+                  <div className="arriendo-card-content">
+
+                    <span className="arriendo-tipo">
+                      {nave.tipo}
+                    </span>
+
+                    <h3>
+                      {nave.nombre}
+                    </h3>
+
+                    <p className="arriendo-matricula">
+                      Matrícula {nave.matricula}
+                    </p>
+
+                    <p className="arriendo-descripcion">
+                      {nave.descripcion}
+                    </p>
+
+
+                    <div className="arriendo-caracteristicas">
+
+                      {nave.caracteristicas.map(
+                        (caracteristica) => (
+
+                          <div
+                            className="arriendo-caracteristica"
+                            key={caracteristica.titulo}
+                          >
+
+                            <div className="arriendo-caracteristica-icono">
+
+                              <IconoCaracteristica
+                                tipo={caracteristica.icono}
+                              />
+
+                            </div>
+
+                            <div>
+
+                              <span>
+                                {caracteristica.titulo}
+                              </span>
+
+                              <strong>
+                                {caracteristica.valor}
+                              </strong>
+
+                            </div>
+
+                          </div>
+
+                        )
+                      )}
+
+                    </div>
+
+
+                    <div className="arriendo-actions">
+
+                      <a
+                        href={nave.fichaPdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="arriendo-pdf arriendo-boton-grande"
+                      >
+
+                        <svg
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+
+                          <path
+                            d="M6 3h8l4 4v14H6z"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.7"
+                            strokeLinejoin="round"
+                          />
+
+                          <path
+                            d="M14 3v5h5M9 13h6M9 17h4"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.7"
+                            strokeLinecap="round"
+                          />
+
+                        </svg>
+
+                        Ver ficha técnica PDF
+
+                        <span aria-hidden="true">
+                          →
+                        </span>
+
+                      </a>
+
+
+                      <a
+                        href={`${whatsappBase}${mensajeWhatsApp}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="arriendo-whatsapp arriendo-boton-grande"
+                      >
+
+                        <svg
+                          viewBox="0 0 32 32"
+                          aria-hidden="true"
+                        >
+
+                          <path
+                            fill="currentColor"
+                            d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.29.6 4.52 1.73 6.48L3 29l6.72-1.76a13 13 0 0 0 6.31 1.61h.01c7.18 0 13.02-5.82 13.02-12.98C29.06 8.82 23.22 3 16.04 3Zm0 23.66h-.01a10.8 10.8 0 0 1-5.52-1.51l-.4-.24-3.99 1.04 1.07-3.88-.26-.4a10.72 10.72 0 0 1-1.67-5.69c0-5.96 4.86-10.8 10.83-10.8 5.97 0 10.82 4.84 10.82 10.8 0 5.95-4.85 10.68-10.87 10.68Zm5.94-8.07c-.33-.17-1.92-.95-2.22-1.05-.3-.11-.52-.17-.74.16-.22.33-.85 1.05-1.04 1.27-.19.22-.38.25-.71.08-.33-.16-1.38-.5-2.63-1.6-.97-.86-1.62-1.93-1.81-2.25-.19-.33-.02-.5.14-.66.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.58-.08-.16-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.16.22 2.32 3.54 5.62 4.96.78.34 1.4.54 1.87.69.79.25 1.5.21 2.07.13.63-.09 1.92-.79 2.19-1.55.27-.76.27-1.41.19-1.55-.08-.14-.3-.22-.63-.38Z"
+                          />
+
+                        </svg>
+
+                        Consultar disponibilidad
+
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                </article>
+
+              )
+            })}
+
+          </div>
+
+
+          <button
+            type="button"
+            className="arriendo-arrow arriendo-arrow-right"
+            onClick={() => moverCarrusel('derecha')}
+            aria-label="Ver siguiente nave"
+          >
+            ›
+          </button>
 
         </div>
 
+
+        <p className="arriendo-carousel-hint">
+          Utiliza las flechas o desliza para conocer nuestras naves disponibles.
+        </p>
+
       </div>
+
     </section>
   )
 }

@@ -4656,3 +4656,308 @@ h1 span {
   }
 }
 
+/* =====================================================
+   V14 CARRUSEL ARRIENDO DE NAVES BORDEMAR
+   Mantiene tarjetas existentes y permite navegación horizontal
+===================================================== */
+
+.arriendo-carousel-shell {
+  position: relative;
+  z-index: 3;
+  margin-top: 8px;
+}
+
+.arriendo-carousel {
+  display: flex !important;
+  grid-template-columns: none !important;
+  gap: 26px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 4px 24px;
+}
+
+.arriendo-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.arriendo-carousel .arriendo-card {
+  flex: 0 0 620px;
+  width: 620px !important;
+  max-width: calc(100vw - 120px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  align-self: flex-start;
+}
+
+/* Mantiene la fotografía completa, pero evita tarjetas excesivamente altas */
+.arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+  height: 410px !important;
+  min-height: 410px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #dfe8ec;
+}
+
+.arriendo-carousel .arriendo-card-destacada .arriendo-imagen img {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+}
+
+.arriendo-carousel .arriendo-card-destacada:hover .arriendo-imagen img {
+  transform: none !important;
+}
+
+.arriendo-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  padding: 0 0 4px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(7, 59, 83, 0.96);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 2.15rem;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(5, 45, 65, 0.25);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.arriendo-arrow:hover {
+  background: #0a5874;
+  box-shadow: 0 18px 38px rgba(5, 45, 65, 0.30);
+}
+
+.arriendo-arrow-left {
+  left: -29px;
+}
+
+.arriendo-arrow-right {
+  right: -29px;
+}
+
+.arriendo-carousel-hint {
+  margin: 18px 0 0;
+  color: #718692;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 1300px) {
+  .arriendo-carousel .arriendo-card {
+    flex-basis: 560px;
+    width: 560px !important;
+  }
+
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 380px !important;
+    min-height: 380px !important;
+  }
+}
+
+@media (max-width: 950px) {
+  .arriendo-carousel {
+    gap: 20px;
+  }
+
+  .arriendo-carousel .arriendo-card {
+    flex-basis: 78vw;
+    width: 78vw !important;
+    max-width: 650px;
+  }
+
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 370px !important;
+    min-height: 370px !important;
+  }
+
+  .arriendo-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.85rem;
+  }
+
+  .arriendo-arrow-left {
+    left: -12px;
+  }
+
+  .arriendo-arrow-right {
+    right: -12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .arriendo-carousel {
+    gap: 14px;
+    padding: 6px 2px 18px;
+  }
+
+  .arriendo-carousel .arriendo-card {
+    flex-basis: 88%;
+    width: 88% !important;
+    max-width: none;
+  }
+
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  .arriendo-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.65rem;
+  }
+
+  .arriendo-arrow-left {
+    left: -6px;
+  }
+
+  .arriendo-arrow-right {
+    right: -6px;
+  }
+
+  .arriendo-carousel-hint {
+    margin-top: 12px;
+    padding: 0 18px;
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .arriendo-carousel .arriendo-card {
+    flex-basis: 92%;
+    width: 92% !important;
+  }
+
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 270px !important;
+    min-height: 270px !important;
+  }
+}
+
+
+/* =====================================================
+   V15 AJUSTE FINAL FOTOS CARRUSEL ARRIENDO
+   Todas las fotografías cubren completamente su recuadro
+   manteniendo posiciones individuales por nave
+===================================================== */
+
+.arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+  position: relative;
+  width: 100%;
+  height: 430px !important;
+  min-height: 430px !important;
+  display: block !important;
+  overflow: hidden;
+  background: #dfe8ec;
+}
+
+.arriendo-carousel .arriendo-card-destacada .arriendo-imagen img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover !important;
+  transform: none !important;
+}
+
+/* SMART'SUB */
+.arriendo-carousel .arriendo-card:nth-child(1) .arriendo-imagen img {
+  object-position: center 50% !important;
+}
+
+/* DOÑA MALE */
+.arriendo-carousel .arriendo-card:nth-child(2) .arriendo-imagen img {
+  object-position: center 28% !important;
+}
+
+/* BELÉN I */
+.arriendo-carousel .arriendo-card:nth-child(3) .arriendo-imagen img {
+  object-position: center 36% !important;
+}
+
+/* PATRICIO ANDRÉS */
+.arriendo-carousel .arriendo-card:nth-child(4) .arriendo-imagen img {
+  object-position: center 42% !important;
+}
+
+/* RÍO MAULE "S" */
+.arriendo-carousel .arriendo-card:nth-child(5) .arriendo-imagen img {
+  object-position: center 46% !important;
+}
+
+.arriendo-carousel .arriendo-card-destacada:hover .arriendo-imagen img {
+  transform: none !important;
+}
+
+/* NOTEBOOK */
+@media (max-width: 1300px) {
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 400px !important;
+    min-height: 400px !important;
+  }
+}
+
+/* TABLET */
+@media (max-width: 950px) {
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 370px !important;
+    min-height: 370px !important;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  .arriendo-carousel .arriendo-card:nth-child(2) .arriendo-imagen img {
+    object-position: center 25% !important;
+  }
+
+  .arriendo-carousel .arriendo-card:nth-child(3) .arriendo-imagen img {
+    object-position: center 34% !important;
+  }
+
+  .arriendo-carousel .arriendo-card:nth-child(4) .arriendo-imagen img {
+    object-position: center 40% !important;
+  }
+
+  .arriendo-carousel .arriendo-card:nth-child(5) .arriendo-imagen img {
+    object-position: center 44% !important;
+  }
+}
+
+/* CELULAR PEQUEÑO */
+@media (max-width: 380px) {
+  .arriendo-carousel .arriendo-card-destacada .arriendo-imagen {
+    height: 290px !important;
+    min-height: 290px !important;
+  }
+}
