@@ -4961,3 +4961,773 @@ h1 span {
     min-height: 290px !important;
   }
 }
+
+
+/* =====================================================
+   V16 VENTA DE EQUIPAMIENTO PARA NAVES
+   Nueva sección integrada al diseño existente de Bordemar
+===================================================== */
+
+.venta-equipamiento {
+  padding: clamp(120px, 8vw, 175px) 0;
+  overflow: hidden;
+  background: #f3f6f8;
+  color: #0b2b3d;
+}
+
+.venta-equipamiento-header {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(60px, 7vw, 120px);
+  align-items: end;
+  margin-bottom: 72px;
+}
+
+.venta-equipamiento-header h2 {
+  max-width: 880px;
+  margin: 0;
+  color: #082a3d;
+  font-size: clamp(4rem, 5vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.048em;
+}
+
+.venta-equipamiento-header h2 span {
+  display: block;
+  color: #178db5;
+}
+
+.venta-equipamiento-intro {
+  max-width: 620px;
+  margin: 0;
+  color: #617783;
+  font-size: clamp(1.12rem, 1.15vw, 1.3rem);
+  line-height: 1.8;
+}
+
+/* CARRUSEL */
+.equipamiento-carousel-wrapper {
+  position: relative;
+  margin-top: 10px;
+}
+
+.equipamiento-carousel {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 8px 4px 24px;
+}
+
+.equipamiento-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* TARJETA DE PRODUCTO */
+.equipamiento-card {
+  position: relative;
+  flex: 0 0 calc((100% - 52px) / 3);
+  min-width: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+  background: #ffffff;
+  border: 1px solid rgba(7, 59, 83, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(7, 43, 61, 0.1);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.equipamiento-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(23, 141, 181, 0.25);
+  box-shadow: 0 24px 58px rgba(7, 43, 61, 0.15);
+}
+
+/* IMAGEN */
+.equipamiento-imagen {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  background: #dfe8ec;
+}
+
+.equipamiento-imagen img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.equipamiento-card:hover .equipamiento-imagen img {
+  transform: scale(1.035);
+}
+
+.equipamiento-imagen-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background:
+    radial-gradient(
+      circle at 82% 22%,
+      rgba(85, 213, 250, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #062b3f 0%,
+      #074b66 100%
+    );
+  color: #ffffff;
+  text-align: center;
+}
+
+.equipamiento-imagen-placeholder span {
+  color: #dceaf0;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.equipamiento-stock {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #073b53;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 22px rgba(3, 25, 38, 0.12);
+}
+
+/* CONTENIDO */
+.equipamiento-contenido {
+  display: flex;
+  flex-direction: column;
+  min-height: 365px;
+  padding: 30px;
+}
+
+.equipamiento-categoria {
+  margin: 0 0 11px;
+  color: #178db5;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.equipamiento-contenido h3 {
+  margin: 0 0 15px;
+  color: #082a3d;
+  font-size: clamp(1.5rem, 1.55vw, 1.9rem);
+  line-height: 1.12;
+}
+
+.equipamiento-descripcion {
+  margin: 0 0 24px;
+  color: #617783;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.equipamiento-precios {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: auto;
+  margin-bottom: 22px;
+  padding-top: 5px;
+}
+
+.equipamiento-precio-anterior {
+  width: fit-content;
+  color: #8a9aa2;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.equipamiento-precio {
+  color: #073b53;
+  font-size: clamp(1.5rem, 1.7vw, 2rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.equipamiento-button {
+  width: 100%;
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+  border-radius: 13px;
+  background: #073b53;
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.equipamiento-button:hover {
+  transform: translateY(-2px);
+  background: #0a5773;
+}
+
+.equipamiento-button span {
+  flex-shrink: 0;
+  color: #62dcfd;
+  font-size: 1.3rem;
+}
+
+/* FLECHAS */
+.equipamiento-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  background: #073b53;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(6, 38, 55, 0.22);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.equipamiento-arrow:hover {
+  background: #0a5773;
+}
+
+.equipamiento-arrow-left {
+  left: -28px;
+}
+
+.equipamiento-arrow-right {
+  right: -28px;
+}
+
+/* BLOQUE CUANDO TODAVÍA NO HAY PRODUCTOS */
+.equipamiento-vacio {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+  max-width: 920px;
+  padding: 42px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 92% 18%,
+      rgba(85, 213, 250, 0.14),
+      transparent 28%
+    ),
+    #073b53;
+  border-radius: 26px;
+  box-shadow: 0 24px 55px rgba(6, 38, 55, 0.14);
+}
+
+.equipamiento-vacio-numero {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(98, 220, 253, 0.25);
+  border-radius: 18px;
+  background: rgba(98, 220, 253, 0.08);
+  color: #62dcfd;
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.equipamiento-vacio h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(1.55rem, 1.8vw, 2rem);
+}
+
+.equipamiento-vacio p {
+  max-width: 650px;
+  margin: 0 0 25px;
+  color: #bdd0d8;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.equipamiento-vacio .equipamiento-button {
+  width: fit-content;
+  min-width: 250px;
+  background: #20acd9;
+}
+
+.equipamiento-vacio .equipamiento-button:hover {
+  background: #35bde7;
+}
+
+/* NOTEBOOK */
+@media (max-width: 1300px) {
+  .equipamiento-card {
+    flex-basis: calc((100% - 26px) / 2);
+  }
+
+  .equipamiento-imagen {
+    height: 310px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 950px) {
+  .venta-equipamiento-header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .venta-equipamiento-intro {
+    max-width: 760px;
+  }
+
+  .equipamiento-card {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .equipamiento-imagen {
+    height: 290px;
+  }
+
+  .equipamiento-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .equipamiento-arrow-left {
+    left: -12px;
+  }
+
+  .equipamiento-arrow-right {
+    right: -12px;
+  }
+}
+
+/* TELÉFONO */
+@media (max-width: 600px) {
+  .venta-equipamiento {
+    padding: 80px 0;
+  }
+
+  .venta-equipamiento-header {
+    margin-bottom: 42px;
+  }
+
+  .venta-equipamiento-header h2 {
+    font-size: clamp(2.8rem, 11vw, 4rem);
+  }
+
+  .equipamiento-carousel {
+    gap: 14px;
+    padding-bottom: 14px;
+  }
+
+  .equipamiento-card {
+    flex-basis: 88%;
+    border-radius: 20px;
+  }
+
+  .equipamiento-imagen {
+    height: 270px;
+  }
+
+  .equipamiento-contenido {
+    min-height: 340px;
+    padding: 24px 22px;
+  }
+
+  .equipamiento-arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 1.65rem;
+  }
+
+  .equipamiento-arrow-left {
+    left: -8px;
+  }
+
+  .equipamiento-arrow-right {
+    right: -8px;
+  }
+
+  .equipamiento-vacio {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 30px 24px;
+    border-radius: 22px;
+  }
+
+  .equipamiento-vacio .equipamiento-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* TELÉFONO PEQUEÑO */
+@media (max-width: 380px) {
+  .equipamiento-card {
+    flex-basis: 92%;
+  }
+
+  .equipamiento-imagen {
+    height: 245px;
+  }
+
+  .equipamiento-contenido {
+    padding: 22px 18px;
+  }
+}
+/* =========================================================
+   V17 - DETALLES VENTA EQUIPAMIENTO
+   Marca + instalación autorizada DIRECTEMAR
+========================================================= */
+
+.equipamiento-marca {
+  margin: -6px 0 16px;
+  color: #83959e;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.equipamiento-instalacion {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  margin: 0 0 24px;
+  padding: 14px 15px;
+
+  background: rgba(22, 113, 143, 0.07);
+
+  border: 1px solid rgba(22, 113, 143, 0.16);
+  border-radius: 12px;
+}
+
+.equipamiento-instalacion span {
+  flex: 0 0 auto;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1px;
+
+  border-radius: 50%;
+
+  background: #0a3549;
+  color: #ffffff;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.equipamiento-instalacion p {
+  margin: 0;
+
+  color: #365663;
+
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Las tarjetas mantienen una altura visual pareja */
+
+.equipamiento-contenido {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 330px);
+}
+
+.equipamiento-descripcion {
+  min-height: 92px;
+}
+
+.equipamiento-precios {
+  margin-top: auto;
+}
+
+/* Mejor presentación para fotografías con fondo blanco */
+
+.equipamiento-card:nth-child(1) .equipamiento-imagen,
+.equipamiento-card:nth-child(4) .equipamiento-imagen {
+  background: #ffffff;
+}
+
+.equipamiento-card:nth-child(1) .equipamiento-imagen img,
+.equipamiento-card:nth-child(4) .equipamiento-imagen img {
+  object-fit: contain;
+  padding: 24px;
+}
+
+/* ANCLA */
+
+.equipamiento-card:nth-child(2) .equipamiento-imagen img {
+  object-position: center 55%;
+}
+
+/* RADAR ICOM */
+
+.equipamiento-card:nth-child(3) .equipamiento-imagen img {
+  object-position: center 42%;
+}
+
+/* NOTEBOOK */
+
+@media (max-width: 1300px) {
+  .equipamiento-contenido {
+    height: calc(100% - 310px);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .equipamiento-contenido {
+    height: calc(100% - 290px);
+  }
+
+  .equipamiento-descripcion {
+    min-height: 84px;
+  }
+}
+
+/* TELÉFONO */
+
+@media (max-width: 600px) {
+  .equipamiento-contenido {
+    height: auto;
+  }
+
+  .equipamiento-descripcion {
+    min-height: auto;
+  }
+
+  .equipamiento-instalacion {
+    padding: 13px;
+  }
+
+  .equipamiento-card:nth-child(1) .equipamiento-imagen img,
+  .equipamiento-card:nth-child(4) .equipamiento-imagen img {
+    padding: 18px;
+  }
+}
+
+/* TELÉFONO PEQUEÑO */
+
+@media (max-width: 380px) {
+  .equipamiento-card:nth-child(1) .equipamiento-imagen img,
+  .equipamiento-card:nth-child(4) .equipamiento-imagen img {
+    padding: 14px;
+  }
+}
+/* =========================================================
+   V18 - COMPACTAR TARJETAS DE EQUIPAMIENTO
+   Mejor visualización en notebook y escritorio
+========================================================= */
+
+/* Reducimos la altura de las fotografías */
+.equipamiento-imagen {
+  height: 250px;
+}
+
+/* Ajustamos la altura interna de la tarjeta */
+.equipamiento-contenido {
+  height: calc(100% - 250px);
+  padding: 24px;
+}
+
+/* Títulos un poco más compactos */
+.equipamiento-contenido h3 {
+  margin-bottom: 10px;
+  font-size: 1.35rem;
+}
+
+/* Marca más cercana al título */
+.equipamiento-marca {
+  margin: -2px 0 12px;
+  font-size: 0.86rem;
+}
+
+/* Descripción más compacta */
+.equipamiento-descripcion {
+  min-height: 74px;
+  margin-bottom: 16px;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* Caja DIRECTEMAR más compacta */
+.equipamiento-instalacion {
+  margin-bottom: 18px;
+  padding: 11px 13px;
+}
+
+.equipamiento-instalacion span {
+  width: 22px;
+  height: 22px;
+  font-size: 0.72rem;
+}
+
+.equipamiento-instalacion p {
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+/* Precio más cercano al botón */
+.equipamiento-precios {
+  margin-bottom: 16px;
+}
+
+.equipamiento-precio {
+  font-size: 1.25rem;
+}
+
+/* Botón más compacto */
+.equipamiento-button {
+  min-height: 52px;
+  padding: 12px 16px;
+  font-size: 0.94rem;
+}
+
+/* Ajustamos productos con fondo blanco */
+.equipamiento-card:nth-child(1) .equipamiento-imagen img,
+.equipamiento-card:nth-child(4) .equipamiento-imagen img {
+  padding: 18px;
+}
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+@media (max-width: 1300px) {
+
+  .equipamiento-imagen {
+    height: 240px;
+  }
+
+  .equipamiento-contenido {
+    height: calc(100% - 240px);
+    padding: 22px;
+  }
+
+  .equipamiento-descripcion {
+    min-height: 68px;
+    font-size: 0.94rem;
+  }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .equipamiento-imagen {
+    height: 230px;
+  }
+
+  .equipamiento-contenido {
+    height: calc(100% - 230px);
+  }
+
+  .equipamiento-descripcion {
+    min-height: auto;
+  }
+
+}
+
+/* =========================================================
+   TELÉFONO
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .equipamiento-imagen {
+    height: 220px;
+  }
+
+  .equipamiento-contenido {
+    height: auto;
+    padding: 20px;
+  }
+
+  .equipamiento-contenido h3 {
+    font-size: 1.25rem;
+  }
+
+  .equipamiento-descripcion {
+    margin-bottom: 15px;
+    font-size: 0.92rem;
+  }
+
+  .equipamiento-instalacion {
+    margin-bottom: 16px;
+  }
+
+  .equipamiento-button {
+    min-height: 50px;
+    font-size: 0.92rem;
+  }
+
+}
+
+/* =========================================================
+   TELÉFONO PEQUEÑO
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .equipamiento-imagen {
+    height: 205px;
+  }
+
+  .equipamiento-contenido {
+    padding: 18px;
+  }
+
+}

@@ -5,6 +5,7 @@ import Servicios from './components/Servicios'
 import Proyectos from './components/Proyectos'
 import Galeria from './components/Galeria'
 import ArriendoNaves from './components/ArriendoNaves'
+import VentaEquipamiento from './components/VentaEquipamiento'
 import Contacto from './components/Contacto'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -21,6 +22,7 @@ export default function App() {
         <Proyectos />
         <Galeria />
         <ArriendoNaves />
+        <VentaEquipamiento />
         <Contacto />
       </main>
 
