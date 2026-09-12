@@ -5731,3 +5731,548 @@ h1 span {
   }
 
 }
+
+/* =========================================================
+   CERTIFICACIONES Y SERVICIOS TÉCNICOS
+========================================================= */
+
+.certificaciones {
+  padding: 110px 0;
+  background: #f4f7f9;
+}
+
+.certificaciones-header {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.certificaciones-header h2 {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #0c2238;
+}
+
+.certificaciones-header h2 span {
+  display: block;
+  color: #167fa8;
+}
+
+.certificaciones-intro {
+  margin: 0;
+  max-width: 580px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #5a6772;
+}
+
+.certificaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.certificacion-card {
+  position: relative;
+  min-height: 390px;
+  padding: 30px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(12, 34, 56, 0.09);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(12, 34, 56, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.certificacion-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(22, 127, 168, 0.3);
+  box-shadow: 0 18px 45px rgba(12, 34, 56, 0.1);
+}
+
+.certificacion-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.certificacion-numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0c2238;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.certificacion-linea {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(22, 127, 168, 0.55), rgba(22, 127, 168, 0));
+}
+
+.certificacion-card h3 {
+  margin: 0 0 24px;
+  min-height: 58px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  color: #0c2238;
+}
+
+.certificacion-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.certificacion-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #56636e;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.certificacion-card li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 21px;
+  width: 21px;
+  height: 21px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(22, 127, 168, 0.11);
+  color: #167fa8;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.certificaciones-cta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 55px;
+  align-items: center;
+  margin-top: 35px;
+  padding: 38px 42px;
+  overflow: hidden;
+  background: linear-gradient(110deg, rgba(9, 31, 51, 0.98), rgba(13, 58, 82, 0.97));
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(5, 26, 43, 0.15);
+}
+
+.certificaciones-cta-label {
+  margin: 0 0 9px;
+  color: #63c4e5;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.certificaciones-cta h3 {
+  margin: 0 0 12px;
+  max-width: 760px;
+  color: #ffffff;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  line-height: 1.25;
+}
+
+.certificaciones-cta p:not(.certificaciones-cta-label) {
+  margin: 0;
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.certificaciones-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 220px;
+  min-height: 56px;
+  white-space: nowrap;
+}
+
+.certificaciones-button span {
+  transition: transform 0.2s ease;
+}
+
+.certificaciones-button:hover span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1150px) {
+  .certificaciones-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .certificacion-card {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 950px) {
+  .certificaciones {
+    padding: 90px 0;
+  }
+
+  .certificaciones-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 42px;
+  }
+
+  .certificaciones-intro {
+    max-width: 720px;
+  }
+
+  .certificaciones-cta {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .certificaciones-button {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 650px) {
+  .certificaciones {
+    padding: 75px 0;
+  }
+
+  .certificaciones-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .certificacion-card {
+    min-height: auto;
+    padding: 25px 22px;
+  }
+
+  .certificacion-card h3 {
+    min-height: auto;
+  }
+
+  .certificaciones-cta {
+    margin-top: 26px;
+    padding: 30px 24px;
+    border-radius: 16px;
+  }
+
+  .certificaciones-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .certificacion-card {
+    padding: 22px 18px;
+  }
+
+  .certificaciones-cta {
+    padding: 26px 20px;
+  }
+}
+
+/* =========================================================
+   AJUSTE FINAL - BOTÓN CTA CERTIFICACIONES
+   Mantiene todos los estilos existentes
+========================================================= */
+
+.certificaciones-button {
+  min-width: 235px;
+  min-height: 58px;
+  padding: 0 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: #21aad7;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(18, 163, 208, 0.24);
+  font-weight: 900;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.certificaciones-button:hover {
+  background: #30bbe8;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(18, 163, 208, 0.32);
+}
+
+.certificaciones-button:focus-visible {
+  outline: 3px solid rgba(99, 196, 229, 0.5);
+  outline-offset: 3px;
+}
+
+.certificaciones-button span {
+  font-size: 1.15rem;
+  transition: transform 0.2s ease;
+}
+
+.certificaciones-button:hover span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 650px) {
+  .certificaciones-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 56px;
+  }
+}
+
+/* =========================================================
+   AUDITORÍA INTEGRAL DE NAVE
+   Bloque destacado dentro de Certificaciones
+========================================================= */
+
+.auditoria-nave {
+  position: relative;
+  margin-top: 34px;
+  padding: 42px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(33, 170, 215, 0.12),
+      transparent 28%
+    ),
+    #ffffff;
+  border: 1px solid rgba(12, 34, 56, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 16px 42px rgba(12, 34, 56, 0.08);
+}
+
+.auditoria-nave::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #167fa8 0%,
+    #21aad7 45%,
+    rgba(33, 170, 215, 0.15) 100%
+  );
+}
+
+.auditoria-nave-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 55px;
+  align-items: center;
+}
+
+.auditoria-nave-label {
+  margin: 0 0 10px;
+  color: #167fa8;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.auditoria-nave h3 {
+  margin: 0 0 14px;
+  color: #0c2238;
+  font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.auditoria-nave-intro {
+  max-width: 900px;
+  margin: 0;
+  color: #5a6772;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.auditoria-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 225px;
+  min-height: 58px;
+  padding: 0 28px;
+  white-space: nowrap;
+  background: #0c2238;
+  border: 1px solid #0c2238;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(12, 34, 56, 0.16);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.auditoria-button:hover {
+  transform: translateY(-2px);
+  background: #167fa8;
+  border-color: #167fa8;
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(22, 127, 168, 0.24);
+}
+
+.auditoria-button span {
+  font-size: 1.15rem;
+  transition: transform 0.2s ease;
+}
+
+.auditoria-button:hover span {
+  transform: translateX(5px);
+}
+
+.auditoria-button:focus-visible {
+  outline: 3px solid rgba(33, 170, 215, 0.35);
+  outline-offset: 3px;
+}
+
+.auditoria-nave-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.auditoria-nave-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 14px 17px;
+  background: #f4f7f9;
+  border: 1px solid rgba(12, 34, 56, 0.07);
+  border-radius: 12px;
+}
+
+.auditoria-nave-item > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(22, 127, 168, 0.12);
+  color: #167fa8;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.auditoria-nave-item p {
+  margin: 0;
+  color: #314957;
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.auditoria-nave-footer {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(12, 34, 56, 0.09);
+}
+
+.auditoria-nave-footer p {
+  margin: 0;
+  color: #667680;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+/* TABLET */
+@media (max-width: 950px) {
+  .auditoria-nave {
+    padding: 34px;
+  }
+
+  .auditoria-nave-header {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .auditoria-button {
+    justify-self: start;
+  }
+
+  .auditoria-nave-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* TELÉFONO */
+@media (max-width: 650px) {
+  .auditoria-nave {
+    margin-top: 26px;
+    padding: 30px 22px;
+    border-radius: 16px;
+  }
+
+  .auditoria-nave h3 {
+    font-size: 1.75rem;
+  }
+
+  .auditoria-nave-intro {
+    font-size: 0.96rem;
+  }
+
+  .auditoria-button {
+    width: 100%;
+    min-width: 0;
+    min-height: 56px;
+  }
+
+  .auditoria-nave-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .auditoria-nave-item {
+    min-height: 58px;
+  }
+}
+
+/* TELÉFONO PEQUEÑO */
+@media (max-width: 380px) {
+  .auditoria-nave {
+    padding: 27px 18px;
+  }
+
+  .auditoria-nave-item {
+    padding: 13px 14px;
+  }
+}
+

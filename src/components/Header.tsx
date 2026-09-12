@@ -27,9 +27,11 @@ export default function Header() {
           <a href="#inicio">Inicio</a>
           <a href="#nosotros">Nosotros</a>
           <a href="#servicios">Servicios</a>
+          <a href="#certificaciones">Certificaciones</a>
           <a href="#proyectos">Proyectos</a>
           <a href="#galeria">Galería</a>
           <a href="#arriendo">Arriendo</a>
+          <a href="#equipamiento">Equipamiento</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
@@ -58,6 +60,10 @@ export default function Header() {
             Servicios
           </a>
 
+          <a href="#certificaciones" onClick={closeMenu}>
+            Certificaciones
+          </a>
+
           <a href="#proyectos" onClick={closeMenu}>
             Proyectos
           </a>
@@ -68,6 +74,10 @@ export default function Header() {
 
           <a href="#arriendo" onClick={closeMenu}>
             Arriendo de Naves
+          </a>
+
+          <a href="#equipamiento" onClick={closeMenu}>
+            Equipamiento
           </a>
 
           <a href="#contacto" onClick={closeMenu}>
