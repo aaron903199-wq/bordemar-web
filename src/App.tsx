@@ -3,10 +3,12 @@ import Hero from './components/Hero'
 import Nosotros from './components/Nosotros'
 import Servicios from './components/Servicios'
 import Certificaciones from './components/Certificaciones'
-import Proyectos from './components/Proyectos'
+import VisitaTecnica from './components/VisitaTecnica'
+import PlanesFlota from './components/PlanesFlota'
 import Galeria from './components/Galeria'
 import ArriendoNaves from './components/ArriendoNaves'
 import VentaEquipamiento from './components/VentaEquipamiento'
+import Clientes from './components/Clientes'
 import Contacto from './components/Contacto'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -21,10 +23,12 @@ export default function App() {
         <Nosotros />
         <Servicios />
         <Certificaciones />
-        <Proyectos />
+        <VisitaTecnica />
+        <PlanesFlota />
         <Galeria />
         <ArriendoNaves />
         <VentaEquipamiento />
+        <Clientes />
         <Contacto />
       </main>
 

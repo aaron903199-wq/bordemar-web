@@ -41,8 +41,26 @@ const grupos = [
       'GPS / Plotter',
       'Radio VHF',
       'Integración de sistemas',
+      'Instalación de cámaras CCTV',
+      'Instalación de STARLINK',
     ],
   },
+]
+
+const ingenieriaNavalItems = [
+  'Plano de Arreglo General (PAG)',
+  'Plano de Seguridad (PSG)',
+  'Plano de Diagrama Eléctrico (PEL)',
+  'Plano de Líneas (PLI)',
+  'Plano de Achique y Lucha Contra Incendios (PBF)',
+  'Plano de Circuito de Combustible (PFC)',
+  'Plano de Secciones Típicas y Cuaderna Maestra',
+  'Plano de Perfil Longitudinal (PLP)',
+  'Minuta de Arqueo (ARQ)',
+  'Especificaciones Técnicas',
+  'Estudios y cálculos de estabilidad',
+  'Inspecciones y levantamientos técnicos',
+  'Regularización y actualización de planos',
 ]
 
 const auditoriaItems = [
@@ -57,6 +75,9 @@ const auditoriaItems = [
 export default function Certificaciones() {
   const whatsappUrl =
     'https://wa.me/56945852433?text=Hola%20Servicios%20Mar%C3%ADtimos%20Bordemar%20SPA%2C%20necesito%20informaci%C3%B3n%20sobre%20certificaciones%20y%20servicios%20t%C3%A9cnicos%20para%20una%20nave.'
+
+  const ingenieriaWhatsappUrl =
+    'https://wa.me/56945852433?text=Hola%20Servicios%20Mar%C3%ADtimos%20Bordemar%20SPA%2C%20necesito%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20sobre%20servicios%20de%20Ingenier%C3%ADa%20Naval.'
 
   const auditoriaWhatsappUrl =
     'https://wa.me/56945852433?text=Hola%20Servicios%20Mar%C3%ADtimos%20Bordemar%20SPA%2C%20necesito%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20para%20realizar%20una%20Auditor%C3%ADa%20Integral%20de%20Nave.'
@@ -83,7 +104,7 @@ export default function Certificaciones() {
           <p className="certificaciones-intro">
             Apoyamos a armadores, operadores y empresas del sector marítimo
             con certificaciones, inspecciones, documentación técnica,
-            mantenimiento y trabajos especializados a bordo.
+            mantenimiento, ingeniería naval y trabajos especializados a bordo.
           </p>
         </div>
 
@@ -113,6 +134,59 @@ export default function Certificaciones() {
               </ul>
             </article>
           ))}
+        </div>
+
+        <div className="ingenieria-naval">
+          <div className="ingenieria-naval-header">
+            <div>
+              <p className="ingenieria-naval-label">
+                INGENIERÍA NAVAL
+              </p>
+
+              <h3>
+                Ingeniería que impulsa
+                <span> tu operación</span>
+              </h3>
+
+              <p className="ingenieria-naval-intro">
+                Desarrollamos y coordinamos soluciones de ingeniería naval
+                orientadas al diseño, levantamiento, actualización y
+                regularización de documentación técnica para embarcaciones
+                y proyectos marítimos.
+              </p>
+            </div>
+
+            <a
+              href={ingenieriaWhatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button ingenieria-naval-button"
+              aria-label="Solicitar cotización de ingeniería naval por WhatsApp"
+            >
+              Cotizar ingeniería
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div className="ingenieria-naval-grid">
+            {ingenieriaNavalItems.map((item) => (
+              <div
+                className="ingenieria-naval-item"
+                key={item}
+              >
+                <span aria-hidden="true">✓</span>
+                <p>{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="ingenieria-naval-footer">
+            <p>
+              Elaboración, actualización y regularización de documentación
+              y planos técnicos según los requerimientos aplicables a cada
+              embarcación y proyecto.
+            </p>
+          </div>
         </div>
 
         <div className="auditoria-nave">
@@ -178,8 +252,8 @@ export default function Certificaciones() {
 
             <p>
               Coordinamos servicios técnicos, inspecciones,
-              documentación y trabajos a bordo según los requerimientos
-              de cada embarcación.
+              documentación, ingeniería naval y trabajos a bordo según
+              los requerimientos de cada embarcación.
             </p>
           </div>
 
